@@ -50,7 +50,7 @@ ORDER BY 2 DESC
 
 4. **Average Sales Amount per City**  
    What is the average sales amount per customer in each city?
-``sql
+```sql
 SELECT 
      c.city_name,
 	 SUM(s.total) as total_revune,
