@@ -70,7 +70,7 @@ ORDER BY 2 DESC
 ```
 5. **City Population and Coffee Consumers**  
    Provide a list of cities along with their populations and estimated coffee consumers.
-``sql
+```sql
 SELECT cx.city_name,
       ROUND((0.25*population)/1000000,2) AS coffee_consumers_in_millions,
 	  COUNT(DISTINCT s.customer_id) as unique_cx
@@ -169,7 +169,7 @@ FROM table_sale AS ts
 JOIN table_rent AS tr
 ON ts.city_name = tr.city_name
 ```
-10. **Monthly Sales Growth**  
+9. **Monthly Sales Growth**  
    Sales growth rate: Calculate the percentage growth (or decline) in sales over different time periods (monthly).
 ```sql
 WITH monthly_sales  
@@ -212,7 +212,7 @@ WITH monthly_sales
 	FROM growth_ratio
 	WHERE last_monthly_sales IS NOT NULL
 ```
-11. **Market Potential Analysis**  
+10. **Market Potential Analysis**  
     Identify top 3 city based on highest sales, return city name, total sale, total rent, total customers, estimated  coffee consumer
   ```sql
 
